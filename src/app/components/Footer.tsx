@@ -1,4 +1,6 @@
 import { Heart } from "lucide-react";
+import { businessHours } from "../businessHours";
+import { contactInfo } from "../contactInfo";
 
 export function Footer() {
   return (
@@ -44,12 +46,39 @@ export function Footer() {
           <div>
             <h4 className="text-foreground mb-4">Informações</h4>
             <ul className="space-y-2 text-sm text-foreground/60">
-              <li>Segunda a Sexta: 9h às 20h</li>
-              <li>Sábado: 9h às 17h</li>
-              <li>São Paulo, SP</li>
+              {businessHours.map(({ label, hours }) => (
+                <li key={label}>
+                  {label}: {hours}
+                </li>
+              ))}
+              <li>
+                <a
+                  href={contactInfo.mapsHref}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-primary transition-colors"
+                >
+                  {contactInfo.address}
+                </a>
+              </li>
               <li className="pt-2">
-                <a href="tel:+5511999999999" className="hover:text-primary transition-colors">
-                  (11) 99999-9999
+                <a
+                  href={contactInfo.whatsappHref}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-primary transition-colors"
+                >
+                  WhatsApp: {contactInfo.whatsappLabel}
+                </a>
+              </li>
+              <li>
+                <a
+                  href={contactInfo.instagramHref}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-primary transition-colors"
+                >
+                  Instagram: {contactInfo.instagramLabel}
                 </a>
               </li>
             </ul>

@@ -1,5 +1,7 @@
 import { motion } from "motion/react";
 import { Instagram, Phone, MapPin, Clock } from "lucide-react";
+import { businessHours } from "../businessHours";
+import { contactInfo } from "../contactInfo";
 
 export function Contact() {
   return (
@@ -29,20 +31,22 @@ export function Contact() {
 
             <div className="space-y-6">
               <a
-                href="tel:+5511999999999"
+                href={contactInfo.whatsappHref}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="flex items-center gap-4 group hover:text-primary transition-colors"
               >
                 <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
                   <Phone className="w-5 h-5 text-primary" />
                 </div>
                 <div>
-                  <div className="text-sm text-foreground/60">Telefone</div>
-                  <div className="text-foreground">(11) 99999-9999</div>
+                  <div className="text-sm text-foreground/60">WhatsApp</div>
+                  <div className="text-foreground">{contactInfo.whatsappLabel}</div>
                 </div>
               </a>
 
               <a
-                href="https://instagram.com"
+                href={contactInfo.instagramHref}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-4 group hover:text-primary transition-colors"
@@ -52,19 +56,25 @@ export function Contact() {
                 </div>
                 <div>
                   <div className="text-sm text-foreground/60">Instagram</div>
-                  <div className="text-foreground">@seu_instagram</div>
+                  <div className="text-foreground">{contactInfo.instagramLabel}</div>
                 </div>
               </a>
 
-              <div className="flex items-center gap-4">
+              <a
+                href={contactInfo.mapsHref}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-4 group hover:text-primary transition-colors"
+              >
                 <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
                   <MapPin className="w-5 h-5 text-primary" />
                 </div>
                 <div>
                   <div className="text-sm text-foreground/60">Localização</div>
-                  <div className="text-foreground">São Paulo, SP</div>
+                  <div className="text-foreground">{contactInfo.address}</div>
+                  <div className="text-sm text-primary">Abrir no mapa</div>
                 </div>
-              </div>
+              </a>
 
               <div className="flex items-start gap-4">
                 <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
@@ -73,9 +83,11 @@ export function Contact() {
                 <div>
                   <div className="text-sm text-foreground/60 mb-2">Horário de atendimento</div>
                   <div className="text-foreground space-y-1 text-sm">
-                    <div>Segunda a Sexta: 9h às 20h</div>
-                    <div>Sábado: 9h às 17h</div>
-                    <div className="text-foreground/60">Domingo: Fechado</div>
+                    {businessHours.map(({ label, hours }) => (
+                      <div key={label}>
+                        {label}: {hours}
+                      </div>
+                    ))}
                   </div>
                 </div>
               </div>
