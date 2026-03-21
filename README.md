@@ -1,7 +1,12 @@
 
-# Studio Depilacao Masculina
+# Studio de Depilação Masculina
 
-Landing page em React + Vite.
+Landing page em React + Vite para o Studio de Depilação Masculina.
+
+## Posicionamento
+
+- Slogan: `Depilação masculina profissional em Juazeiro do Norte.`
+- Prova de autoridade: `Especialista em depilação masculina — +15 anos de experiência.`
 
 ## Desenvolvimento local
 

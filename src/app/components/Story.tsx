@@ -44,8 +44,12 @@ export function Story() {
               Especialista em depilação masculina
             </h2>
 
+            <p className="text-primary text-lg md:text-xl tracking-wide">
+              Especialista em depilação masculina — +15 anos de experiência.
+            </p>
+
             <p className="text-lg text-foreground/80 leading-relaxed">
-              Com mais de 10 anos de experiência, me especializei em depilação masculina 
+              Com mais de 15 anos de experiência, me especializei em depilação masculina 
               profissional. Domino tanto a técnica com máquina quanto com cera, sempre 
               priorizando seu conforto e resultados impecáveis.
             </p>
@@ -59,7 +63,7 @@ export function Story() {
             <div className="grid grid-cols-3 gap-6 pt-8">
               <div className="text-center space-y-2">
                 <Award className="w-8 h-8 text-primary mx-auto" />
-                <div className="text-2xl font-serif text-primary">10+</div>
+                <div className="text-2xl font-serif text-primary">15+</div>
                 <div className="text-sm text-foreground/70">Anos especializados</div>
               </div>
               <div className="text-center space-y-2">

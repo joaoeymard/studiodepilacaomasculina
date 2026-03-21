@@ -24,7 +24,7 @@ export function Hero() {
         >
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-primary/30 bg-black/40 backdrop-blur-sm">
             <Sparkles className="w-4 h-4 text-primary" />
-            <span className="text-sm text-primary tracking-wider uppercase">Depilação Masculina Exclusiva</span>
+            <span className="text-sm text-primary tracking-wider uppercase">Depilação masculina profissional em Juazeiro do Norte</span>
           </div>
 
           <h1 className="text-5xl md:text-7xl font-serif text-foreground leading-tight">
