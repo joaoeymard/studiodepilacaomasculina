@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { motion } from "motion/react";
 import { ArrowRight } from "lucide-react";
+import { contactInfo } from "../contactInfo";
 
 type Audience = "masculino" | "feminino";
 type ServiceGroupId = "head" | "upper" | "lower";
@@ -428,10 +429,15 @@ export function Services() {
           <p className="mb-6 text-foreground/70">
             Quer montar uma sessao sob medida ou combinar regioes no mesmo horario?
           </p>
-          <button className="group inline-flex items-center justify-center gap-2 rounded-full bg-primary px-8 py-4 text-primary-foreground transition-colors hover:bg-primary/90">
+          <a
+            href={contactInfo.whatsappHref}
+            target="_blank"
+            rel="noreferrer"
+            className="group inline-flex items-center justify-center gap-2 rounded-full bg-primary px-8 py-4 text-primary-foreground transition-colors hover:bg-primary/90"
+          >
             <span>Agendar atendimento</span>
             <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-          </button>
+          </a>
         </motion.div>
       </div>
     </section>
