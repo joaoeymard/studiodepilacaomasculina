@@ -25,6 +25,38 @@ type PriceMap = {
   groups: ServiceGroup[];
 };
 
+type FeaturedCombo = {
+  title: string;
+  price: number;
+  originalPrice: number;
+  badge: string;
+  includesLabel: string;
+  includedItems: string[];
+  bonus: string;
+  method: string;
+};
+
+const featuredComboByAudience: Partial<Record<Audience, FeaturedCombo>> = {
+  masculino: {
+    title: "Combo Premium",
+    price: 300,
+    originalPrice: 395,
+    badge: "PACOTE PREMIUM MASCULINO",
+    includesLabel: "Inclui:",
+    includedItems: [
+      "Virilha completa + anus",
+      "Nadegas",
+      "Pernas completas",
+      "Bracos",
+      "Axilas",
+      "Costas completas",
+      "Torax completo"
+    ],
+    bonus: "Bonus exclusivo gratis: maos, pes e nuca",
+    method: "Depilacao a cera ou com maquininha de aparar pelos"
+  }
+};
+
 const priceMaps: PriceMap[] = [
   {
     audience: "masculino",
@@ -165,6 +197,58 @@ function GroupCard({
   );
 }
 
+function FeaturedComboCard({ combo }: { combo: FeaturedCombo }) {
+  return (
+    <section className="overflow-hidden rounded-[2rem] border border-primary/20 bg-[linear-gradient(180deg,rgba(255,255,255,0.02),rgba(0,0,0,0.22))] p-5 shadow-[0_28px_60px_rgba(0,0,0,0.35)] sm:p-6">
+      <div className="flex flex-col gap-5">
+        <div className="flex flex-col gap-5 lg:flex-row lg:items-start lg:justify-between">
+          <div className="max-w-3xl">
+            <h3 className="text-3xl font-serif text-foreground sm:text-4xl">
+              {combo.title}
+            </h3>
+
+            <div className="mt-3 flex flex-wrap items-end gap-3">
+              <span className="text-3xl font-serif text-primary">
+                {formatPrice(combo.price)}
+              </span>
+              <span className="text-xl text-foreground/45 line-through">
+                {formatPrice(combo.originalPrice)}
+              </span>
+            </div>
+
+            <div className="mt-5 space-y-3 text-foreground/72">
+              <p className="text-sm font-semibold uppercase tracking-[0.22em] text-primary/85">
+                👑 {combo.badge}
+              </p>
+            </div>
+          </div>
+
+          <div className="max-w-sm rounded-[1.5rem] border border-primary/15 bg-black/30 p-4 text-base leading-relaxed text-foreground/74 lg:text-right">
+            <p className="font-semibold text-foreground/82">🎁 {combo.bonus}</p>
+            <p className="mt-3 font-semibold text-foreground/82">✨ {combo.method}</p>
+          </div>
+        </div>
+
+        <div>
+          <p className="mb-3 text-lg font-semibold text-foreground/82">
+            📍 {combo.includesLabel}
+          </p>
+          <div className="grid gap-3 sm:grid-cols-2">
+            {combo.includedItems.map((item) => (
+              <div
+                key={item}
+                className="rounded-2xl border border-primary/12 bg-black/40 px-4 py-3 text-base text-foreground/78"
+              >
+                {item}
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 function TabButton({
   active,
   onClick,
@@ -199,6 +283,7 @@ export function Services() {
   });
   const currentMap =
     priceMaps.find((map) => map.audience === activeAudience) ?? priceMaps[0];
+  const featuredCombo = featuredComboByAudience[activeAudience];
   const selectedIds = selectedByAudience[activeAudience];
   const selectedTotal = sumSelectedPrices(currentMap, selectedIds);
 
@@ -321,6 +406,7 @@ export function Services() {
           </div>
 
           <div className="grid gap-5">
+            {featuredCombo && <FeaturedComboCard combo={featuredCombo} />}
             {currentMap.groups.map((group) => (
               <GroupCard
                 key={group.id}
