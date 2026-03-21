@@ -1,5 +1,6 @@
 import { motion } from "motion/react";
 import { Award, Heart, Star } from "lucide-react";
+import { siteImages } from "../siteImages";
 
 export function Story() {
   return (
@@ -16,8 +17,8 @@ export function Story() {
           >
             <div className="relative overflow-hidden rounded-lg">
               <img
-                src="https://images.unsplash.com/photo-1741345980697-f3c43eba44a0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBiYXJiZXIlMjBwb3J0cmFpdCUyMG1hbnxlbnwxfHx8fDE3NzM5OTYzNzV8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
-                alt="Professional specialist"
+                src={siteImages.specialist}
+                alt="Foto da sessão nossa história com atendimento de depilação masculina"
                 className="w-full h-[500px] object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />

@@ -2,6 +2,7 @@ import { motion } from "motion/react";
 import { Instagram, Phone, MapPin, Clock } from "lucide-react";
 import { businessHours } from "../businessHours";
 import { contactInfo } from "../contactInfo";
+import { siteImages } from "../siteImages";
 
 export function Contact() {
   return (
@@ -104,8 +105,8 @@ export function Contact() {
           >
             <div className="relative rounded-lg overflow-hidden">
               <img
-                src="https://images.unsplash.com/photo-1623659952511-e7e5445f4f03?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxlbGVnYW50JTIwYmVhdXR5JTIwc2Fsb24lMjBibGFjayUyMGdvbGR8ZW58MXx8fHwxNzc0MDQwODgwfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
-                alt="Elegant beauty salon"
+                src={siteImages.environment}
+                alt="Foto da sessão de contatos com ambiente de atendimento masculino"
                 className="w-full h-[500px] object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />

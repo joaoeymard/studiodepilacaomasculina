@@ -1,5 +1,6 @@
 import { motion } from "motion/react";
 import { Sparkles, Clock, Shield, Leaf } from "lucide-react";
+import { siteImages } from "../siteImages";
 
 const experiences = [
   {
@@ -85,8 +86,8 @@ export function Experience() {
         >
           <div className="relative rounded-lg overflow-hidden h-[400px]">
             <img
-              src="https://images.unsplash.com/photo-1651993382466-0fefd887e901?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtYXNjdWxpbmUlMjB3ZWxsbmVzcyUyMHNwYSUyMG1hbnxlbnwxfHx8fDE3NzQwNDQzMzB8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
-              alt="Masculine grooming experience"
+              src={siteImages.procedure}
+              alt="Foto da sessão experiência mostrando atendimento de depilação masculina"
               className="w-full h-full object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-r from-black/60 to-transparent flex items-center">

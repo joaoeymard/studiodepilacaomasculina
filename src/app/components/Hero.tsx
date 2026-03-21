@@ -1,5 +1,6 @@
 import { motion } from "motion/react";
 import { Sparkles } from "lucide-react";
+import { siteImages } from "../siteImages";
 
 export function Hero() {
   return (
@@ -7,9 +8,20 @@ export function Hero() {
       {/* Background Image with Overlay */}
       <div className="absolute inset-0">
         <img
-          src="https://images.unsplash.com/photo-1759134198561-e2041049419c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtYWxlJTIwZ3Jvb21pbmclMjBiYXJiZXIlMjBsdXh1cnl8ZW58MXx8fHwxNzc0MDQ0MzI5fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
-          alt="Luxury male grooming"
-          className="w-full h-full object-cover"
+          src={siteImages.hero}
+          alt=""
+          aria-hidden="true"
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+        <video
+          src={siteImages.heroVideo}
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="auto"
+          className="absolute inset-0 w-full h-full object-cover"
+          aria-hidden="true"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/90" />
       </div>
