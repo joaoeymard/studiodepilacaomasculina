@@ -13,7 +13,7 @@ export function Footer() {
               <div className="w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center">
                 <Heart className="w-4 h-4 text-primary" />
               </div>
-              <span className="text-xl font-serif text-primary">Depilação Masculina</span>
+              <span className="text-xl font-serif text-primary">Studio de Depilação Masculina</span>
             </div>
             <p className="text-foreground/60 text-sm leading-relaxed">
               Especialista em depilação masculina profissional. Máquina e cera com excelência.
@@ -88,7 +88,7 @@ export function Footer() {
         {/* Bottom */}
         <div className="pt-8 border-t border-primary/10 text-center">
           <p className="text-foreground/50 text-sm">
-            © 2026 Studio Premium. Todos os direitos reservados.
+            © 2026 Studio de Depilação Masculina. Todos os direitos reservados.
           </p>
         </div>
       </div>

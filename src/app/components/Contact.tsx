@@ -6,7 +6,7 @@ import { siteImages } from "../siteImages";
 
 export function Contact() {
   return (
-    <section className="py-24 px-6 bg-secondary relative overflow-hidden">
+    <section id="contato" className="py-24 px-6 bg-secondary relative overflow-hidden">
       {/* Decorative gradient */}
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-primary/5 to-transparent" />
 

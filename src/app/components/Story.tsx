@@ -4,7 +4,7 @@ import { siteImages } from "../siteImages";
 
 export function Story() {
   return (
-    <section className="py-24 px-6 bg-gradient-to-b from-black to-secondary">
+    <section id="sobre" className="py-24 px-6 bg-gradient-to-b from-black to-secondary">
       <div className="max-w-6xl mx-auto">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           {/* Image */}

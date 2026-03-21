@@ -45,29 +45,29 @@ const featuredComboByAudience: Partial<Record<Audience, FeaturedCombo>> = {
     badge: "PACOTE PREMIUM MASCULINO",
     includesLabel: "Inclui:",
     includedItems: [
-      "Virilha completa + anus",
-      "Nadegas",
+      "Virilha completa + ânus",
+      "Nádegas",
       "Pernas completas",
-      "Bracos",
+      "Braços",
       "Axilas",
       "Costas completas",
-      "Torax completo"
+      "Tórax completo"
     ],
-    bonus: "Bonus exclusivo gratis: maos, pes e nuca",
-    method: "Depilacao a cera ou com maquininha de aparar pelos"
+    bonus: "Bônus exclusivo grátis: mãos, pés e nuca",
+    method: "Depilação a cera ou com maquininha de aparar pelos"
   }
 };
 
 const priceMaps: PriceMap[] = [
   {
     audience: "masculino",
-    methodLabel: "Cera ou maquina de aparar pelos",
+    methodLabel: "Cera ou máquina de aparar pelos",
     intro:
-      "Atendimento masculino como foco principal, com os valores organizados por area do corpo para consulta rapida.",
+      "Atendimento masculino como foco principal, com os valores organizados por área do corpo para consulta rápida.",
     groups: [
       {
         id: "head",
-        title: "Cabeca",
+        title: "Cabeça",
         items: [
           { id: "m-sobrancelhas", label: "Sobrancelhas", price: 35 },
           { id: "m-nariz", label: "Nariz", price: 15 },
@@ -77,12 +77,12 @@ const priceMaps: PriceMap[] = [
       },
       {
         id: "upper",
-        title: "Torax e membros superiores",
+        title: "Tórax e membros superiores",
         items: [
-          { id: "m-torax", label: "Peito + abdomen", price: 60 },
+          { id: "m-torax", label: "Peito + abdômen", price: 60 },
           { id: "m-costas", label: "Costas", price: 60 },
           { id: "m-axila", label: "Axila", price: 25 },
-          { id: "m-bracos", label: "Bracos completos", price: 50 }
+          { id: "m-bracos", label: "Braços completos", price: 50 }
         ]
       },
       {
@@ -91,8 +91,8 @@ const priceMaps: PriceMap[] = [
         items: [
           { id: "m-pernas", label: "Pernas completas", price: 80 },
           { id: "m-virilha", label: "Virilha completa", price: 80 },
-          { id: "m-nadegas", label: "Nadegas", price: 40 },
-          { id: "m-anus", label: "Anus", price: 20 }
+          { id: "m-nadegas", label: "Nádegas", price: 40 },
+          { id: "m-anus", label: "Ânus", price: 20 }
         ]
       }
     ]
@@ -100,19 +100,19 @@ const priceMaps: PriceMap[] = [
   {
     audience: "feminino",
     methodLabel: "Cera",
-    eyebrowMethod: "Henna disponivel para acabamento",
+    eyebrowMethod: "Henna disponível para acabamento",
     intro:
-      "Tabela complementar para o atendimento feminino, separada por sessoes para facilitar a leitura dos valores.",
+      "Tabela complementar para o atendimento feminino, separada por sessões para facilitar a leitura dos valores.",
     groups: [
       {
         id: "head",
-        title: "Cabeca",
+        title: "Cabeça",
         items: [
           { id: "f-sobrancelhas", label: "Sobrancelhas", price: 35 },
           { id: "f-sobrancelhas-henna", label: "Sobrancelhas + henna", price: 45 },
           { id: "f-henna", label: "Henna", price: 20 },
           { id: "f-nariz", label: "Nariz", price: 15 },
-          { id: "f-buco", label: "Buco", price: 15 },
+          { id: "f-buco", label: "Buço", price: 15 },
           { id: "f-queixo", label: "Queixo", price: 10 },
           { id: "f-bochechas", label: "Bochechas", price: 20 },
           { id: "f-testa", label: "Testa", price: 15 },
@@ -122,23 +122,23 @@ const priceMaps: PriceMap[] = [
       },
       {
         id: "upper",
-        title: "Torax e membros superiores",
+        title: "Tórax e membros superiores",
         items: [
           { id: "f-seios", label: "Entre os seios", price: 15 },
           { id: "f-axila", label: "Axila", price: 25 },
-          { id: "f-braco", label: "Braco completo", price: 50 },
-          { id: "f-maos", label: "Maos", price: 10 },
-          { id: "f-faixa-abdomen", label: "Faixa do abdomen", price: 15 }
+          { id: "f-braco", label: "Braço completo", price: 50 },
+          { id: "f-maos", label: "Mãos", price: 10 },
+          { id: "f-faixa-abdomen", label: "Faixa do abdômen", price: 15 }
         ]
       },
       {
         id: "lower",
         title: "Membros inferiores",
         items: [
-          { id: "f-virilha", label: "Virilha completa + anus", price: 60 },
+          { id: "f-virilha", label: "Virilha completa + ânus", price: 60 },
           { id: "f-perna-completa", label: "Perna completa", price: 70 },
           { id: "f-meia-perna", label: "Meia perna", price: 35 },
-          { id: "f-pes", label: "Pes", price: 10 }
+          { id: "f-pes", label: "Pés", price: 10 }
         ]
       }
     ]
@@ -310,7 +310,7 @@ export function Services() {
   }
 
   return (
-    <section className="bg-gradient-to-b from-black to-secondary px-6 py-24">
+    <section id="servicos" className="bg-gradient-to-b from-black to-secondary px-6 py-24">
       <div className="mx-auto max-w-7xl">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -320,13 +320,13 @@ export function Services() {
           className="mx-auto mb-12 max-w-3xl text-center"
         >
           <span className="text-sm uppercase tracking-[0.3em] text-primary">
-            Tabela de precos
+            Tabela de preços
           </span>
           <h2 className="mt-4 text-4xl font-serif text-foreground md:text-5xl">
-            Valores por sessao do corpo
+            Valores por sessão do corpo
           </h2>
           <p className="mx-auto mt-6 max-w-2xl text-lg text-foreground/70">
-            Primeiro voce escolhe o publico. Depois consulta os valores em uma lista mais limpa, separada por cabeca, torax e membros superiores, e membros inferiores.
+            Primeiro você escolhe o público. Depois consulta os valores em uma lista mais limpa, separada por cabeça, tórax e membros superiores, e membros inferiores.
           </p>
         </motion.div>
 
@@ -368,7 +368,7 @@ export function Services() {
 
             <div className="rounded-2xl border border-primary/15 bg-black/30 px-4 py-4 text-sm text-foreground/75 lg:min-w-[18rem]">
               <p className="text-[11px] uppercase tracking-[0.3em] text-primary/80">
-                Metodo
+                Método
               </p>
               <p className="mt-2 text-base text-foreground">{currentMap.methodLabel}</p>
               {currentMap.eyebrowMethod && (
@@ -385,7 +385,7 @@ export function Services() {
                 Simulador de valores
               </p>
               <p className="mt-2 text-sm text-foreground/65">
-                Clique nos servicos para montar uma soma rapida.
+                Clique nos serviços para montar uma soma rápida.
               </p>
             </div>
 
@@ -401,7 +401,7 @@ export function Services() {
                 onClick={clearSelections}
                 className="rounded-full border border-primary/18 px-4 py-2 text-xs uppercase tracking-[0.24em] text-primary transition-colors hover:bg-primary/10"
               >
-                Limpar selecao
+                Limpar seleção
               </button>
             </div>
           </div>
@@ -427,7 +427,7 @@ export function Services() {
           className="mt-16 text-center"
         >
           <p className="mb-6 text-foreground/70">
-            Quer montar uma sessao sob medida ou combinar regioes no mesmo horario?
+            Quer montar uma sessão sob medida ou combinar regiões no mesmo horário?
           </p>
           <a
             href={contactInfo.whatsappHref}
